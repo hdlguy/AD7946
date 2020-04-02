@@ -12,7 +12,7 @@ module ad7946_tb ();
 
     ad7946 ad7946_inst (.pden(pden), .chsel(chsel), .cs_n(cs_n), .sclk(sclk), .sdo(sdo));
     
-    ad7946_controller ad7946_controller_inst (.clk(clk), .pden(pden), .chsel(chsel), .cs_n(cs_n), .sclk(sclk), .sdi(sdo));
+    ad7946_controller uut (.clk(clk), .pden(pden), .chsel(chsel), .cs_n(cs_n), .sclk(sclk), .sdi(sdo));
 
     initial begin
         reset = 1;

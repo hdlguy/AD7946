@@ -8,6 +8,8 @@ module ad7946 (
     output  logic       sdo
 );
 
+    assign sdo = 1;
+
 endmodule
 
 
