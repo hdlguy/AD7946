@@ -5,10 +5,10 @@ module ad7946 (
     input   logic       chsel,
     input   logic       cs_n,
     input   logic       sclk,
-    output  logic       sdo
+    output  logic       sdo=0
 );
 
-    assign sdo = 1;
+    always_ff @(negedge sclk) sdo <= ~sdo;
 
 endmodule
 

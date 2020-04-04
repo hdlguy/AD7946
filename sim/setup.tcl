@@ -14,12 +14,12 @@ load_features ipintegrator
 #generate_target {all} [get_ips *]
 
 # Read in the hdl source.
-read_verilog -sv ../ad7946_controller.sv
-read_verilog -sv ../ad7946.sv
-read_verilog -sv ../ad7946_tb.sv
+read_verilog -sv ../source/ad7946_controller.sv
+read_verilog -sv ../source/ad7946.sv
+read_verilog -sv ../source/ad7946_tb.sv
 
 
-#add_files -fileset sim_1 -norecurse ./ad7946_tb_behav.wcfg
+add_files -fileset sim_1 -norecurse ./ad7946_tb_behav.wcfg
 
 close_project
 
