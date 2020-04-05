@@ -22,6 +22,11 @@ module ad7946_tb ();
         #(clk_period*10);
         reset = 0;
     end
+    
+    // some counters to make simulation readable.
+    integer bitnum, bitnum_q;
+    always_ff @(posedge sclk) if (1==cs_n) bitnum<=13; else bitnum<=bitnum-1;
+    always_ff @(negedge sclk) bitnum_q <= bitnum;
 
 endmodule
 
