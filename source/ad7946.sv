@@ -18,9 +18,9 @@ module ad7946 (
             data1 <= data1 + 1;
         end
         if (1==chsel) begin       
-            data <= {2'b00, data0};
+            data <= {2'b01, data0};
         end else begin
-            data <= {2'b01, data1};
+            data <= {2'b00, data1};
         end
     end
     
